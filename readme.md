@@ -1,13 +1,10 @@
-This is an opinionated(_?_) PHP web application starter package and development environment utilizing the Slim framework.
+This is an opinionated(_?_) PHP web application starter package utilizing the [Slim](https://www.slimframework.com/) framework. The work is heavily based on [Odan's slim4 skeleton](https://github.com/odan/slim4-skeleton). 
 
-# Usage
+## Development Environment
 
-From the application directory, run:  
-`docker-compose up`
+The development environment utlizies [Docker](https://docker.com) containers via `docker compose`.
 
-Your development machine will be available at [localhost](http://localhost). If you need to change the port number, you can do this by editing the ports field under the `nginx` service in `docker-compose.yml`.
-
-## Services
+It should work out of the box, just clone this repo and run `docker compose up` from the directory. Your development machine will be available at [localhost](http://localhost). Terminate the development environment with ^C when you're done.
 
 Three services are used and exposed:
 
@@ -22,6 +19,14 @@ The first time you run `docker-compose up`, a new PHP image will be built and th
 - gd (image manipulation)
 - xdebug (remote debugging)
 - pdo_mysql (mysql database drivers)
-- bz2 (compression)
+- bz2 (for handling compression)
 
-Additionally, Composer will also be available.
+Additionally, [Composer](https://getcomposer.org/) will also be installed.
+
+These extensions are installed via the [docker-php-extension-installer](https://github.com/mlocati/docker-php-extension-installer).
+
+An environment variable, `APP_ENV` is also set to `local`.
+
+### nginx (nginx)
+
+An nginx webserver is created to serve your application. By default it will be available at [localhost](http://localhost). If you wish to change this, or if it conflicts with another service on your computer, you can change the port assignment to something else. The format is `localport:containerport`. You should only change the local port number.

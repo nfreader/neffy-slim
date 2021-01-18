@@ -35,7 +35,7 @@ services:
       - "80:80"
     depends_on:
       - php
-
+      
 networks:
   app-network:
     driver: bridge
