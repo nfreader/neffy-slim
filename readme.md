@@ -1,4 +1,8 @@
-This is an opinionated(_?_) PHP web application starter package utilizing the [Slim](https://www.slimframework.com/) framework. The work is heavily based on [Odan's slim4 skeleton](https://github.com/odan/slim4-skeleton). 
+This is an opinionated(_?_) PHP web application starter package utilizing the [Slim](https://www.slimframework.com/) framework. The work is heavily based on [Odan's slim4 skeleton](https://github.com/odan/slim4-skeleton).
+
+## Work In Progress
+
+This is a work in progress and should not be used in a production environment.
 
 ## Development Environment
 
